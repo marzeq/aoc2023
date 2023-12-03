@@ -1,5 +1,6 @@
 mod day1;
 mod day2;
+mod day3;
 use std::{fs::File, io::Read};
 
 fn main() {
@@ -23,6 +24,7 @@ fn main() {
     match day {
         1 => day1::run(part, read_input()),
         2 => day2::run(part, read_input()),
+        3 => day3::run(part, read_input()),
         _ => {
             println!("Invalid day: {}", day);
             std::process::exit(1);
