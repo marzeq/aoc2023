@@ -3,6 +3,7 @@ mod day2;
 mod day3;
 mod day4;
 mod day5;
+mod day6;
 use std::{fs::File, io::Read};
 
 fn main() {
@@ -13,15 +14,14 @@ fn main() {
         return;
     }
 
-    let day = args[1].parse::<u8>().unwrap_or_else(|_| {
-        println!("Invalid day: {}", args[1]);
-        std::process::exit(1);
-    });
+    let day = args[1].parse::<u8>().expect("Invalid day");
 
-    let part = args[2].parse::<u8>().unwrap_or_else(|_| {
-        println!("Invalid part: {}", args[2]);
-        std::process::exit(1);
-    });
+    let part = args[2].parse::<u8>().expect("Invalid part");
+
+    if part != 1 && part != 2 {
+        println!("Part must be 1 or 2");
+        return;
+    }
 
     match day {
         1 => day1::run(part, read_input()),
@@ -29,6 +29,7 @@ fn main() {
         3 => day3::run(part, read_input()),
         4 => day4::run(part, read_input()),
         5 => day5::run(part, read_input()),
+        6 => day6::run(part, read_input()),
         _ => {
             println!("Invalid day: {}", day);
             std::process::exit(1);
