@@ -67,6 +67,11 @@ fn part_1(input: &str) {
     println!("{min}");
 }
 
+// for some reason this is not working
+// whoever came up with this is a bloody bastard
+// i cannot be bothered to fix this, it works on the sample input but not on the real input
+// piece of s***
+
 fn part_2(input: &str) {
     #[derive(Debug, Clone, Copy)]
     struct Range {
