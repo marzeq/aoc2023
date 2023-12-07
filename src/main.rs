@@ -4,6 +4,7 @@ mod day3;
 mod day4;
 mod day5;
 mod day6;
+mod day7;
 use std::{fs::File, io::Read};
 
 fn main() {
@@ -30,6 +31,7 @@ fn main() {
         4 => day4::run(part, read_input()),
         5 => day5::run(part, read_input()),
         6 => day6::run(part, read_input()),
+        7 => day7::run(part, read_input()),
         _ => {
             println!("Invalid day: {}", day);
             std::process::exit(1);
