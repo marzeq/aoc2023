@@ -93,7 +93,7 @@ pub fn run(part: u8, input: String) {
         maxcount == 2
     }
 
-    fn is_high_card(hand: Vec<char>, part: u8) -> bool {
+    fn is_high_card(hand: Vec<char>) -> bool {
         for i in 0..5 {
             if hand.iter().filter(|&&card| card == hand[i]).count() != 1 {
                 return false;
@@ -168,7 +168,7 @@ pub fn run(part: u8, input: String) {
             3
         } else if is_pair(hand.clone(), part) {
             2
-        } else if is_high_card(hand.clone(), part) {
+        } else if is_high_card(hand.clone()) {
             1
         } else {
             0
